@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target display_map_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/display_map_node.dir/src/display_map_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/lattinone/Damiano/progetto/devel/.private/display_map/lib/display_map/display_map_node[0m
-[100%] Built target display_map_node

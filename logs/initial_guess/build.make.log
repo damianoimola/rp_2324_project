@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target initial_guess_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/initial_guess_node.dir/src/initial_guess_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/lattinone/Damiano/progetto/devel/.private/initial_guess/lib/initial_guess/initial_guess_node[0m
+[100%] Built target initial_guess_node

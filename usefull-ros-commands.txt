@@ -1,0 +1,58 @@
+
+## CREATE NODE
+
+   catkin_create_pkg
+
+
+
+## BUILD PROJECT
+
+   catkin build
+
+
+
+## RUN NODE (you need to source the workspace)
+
+   rosrun <package_name> <node_name> <topic_name>
+
+(i.e. rosrun laset_listener laser_listener_node scanne) this run laserlistener with scanne subscription,, so waiting for scanne publishing
+
+
+
+## SOURCING WORKSPACE (IN DEVEL)
+
+   source setup.bash
+
+you need to do it every time you edit something in the package ecosystem
+
+
+
+## START MASTER
+
+   source /opt/ros/noetic/setup.bash
+   roscore
+
+
+
+## DISPLAY MAP
+
+   rosrun map_server map_server src/display_map/src/diag_map.png  0.01
+
+
+
+
+
+
+
+
+###### OTHERS ######
+
+## LISTING ACTIVE NODES
+
+   rosnode list
+
+## KILL ACTIVE NODE
+
+   rosnode kill <name>
+
+where <name> is the name passed in ros::init(..., ..., "<name>")

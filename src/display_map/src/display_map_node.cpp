@@ -35,10 +35,25 @@ int main(int argc, char** argv ){
     {
         for (int x = 0; x < image.cols; ++x)
         {
+            // TODO: CHECK, DOES NOT WORK PROPERLY
             // [0, 100] = prob. of going in that pixel
             // white pixels=free space
             // black pixels=obstacles
             // transparent pixels=nothing
+            // to do so, we need the 4th dimension of image color
+            uchar alpha = image.at<cv::Vec4b>(y, x)[3];
+
+            if (alpha == 0)
+            {
+                // transparent pixel = unknown
+                map_msg.data[y * map_msg.info.width + x] = -1;
+            }
+            else
+            {
+                // non-transparent pixel
+                int value = (image.at<cv::Vec4b>(y, x)[0] > 200) ? 0 : 100;
+                map_msg.data[y * map_msg.info.width + x] = value;
+            }
         }
     }
 
