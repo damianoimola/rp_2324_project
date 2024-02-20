@@ -1,0 +1,1 @@
+/home/lattinone/Damiano/progetto/devel/.private/initial_pose/lib/pkgconfig/initial_pose.pc

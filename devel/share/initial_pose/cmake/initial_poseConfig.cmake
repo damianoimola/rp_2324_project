@@ -1,0 +1,1 @@
+/home/lattinone/Damiano/progetto/devel/.private/initial_pose/share/initial_pose/cmake/initial_poseConfig.cmake
