@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/lattinone/Damiano/progetto/devel/.private/goal_pose:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/lattinone/Damiano/progetto/devel/.private/goal_pose/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/lattinone/Damiano/progetto/devel/.private/goal_pose/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/lattinone/Damiano/progetto/build/goal_pose'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/lattinone/Damiano/progetto/devel/.private/goal_pose/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/lattinone/Damiano/progetto/src/goal_pose:$ROS_PACKAGE_PATH"

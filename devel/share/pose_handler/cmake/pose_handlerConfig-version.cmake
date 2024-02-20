@@ -1,0 +1,1 @@
+/home/lattinone/Damiano/progetto/devel/.private/pose_handler/share/pose_handler/cmake/pose_handlerConfig-version.cmake

@@ -4,7 +4,7 @@
 
 
 int main(int argc, char** argv ){
-    ros::init(argc, argv, "displaymap");
+    ros::init(argc, argv, "pub_displaymap");
     ros::NodeHandle n;
 
     // map's publisher

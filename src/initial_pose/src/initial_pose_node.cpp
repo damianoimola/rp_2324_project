@@ -11,11 +11,11 @@ void initialPoseCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPt
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "initial_pose_subscriber");
-    ros::NodeHandle nh;
+    ros::init(argc, argv, "sub_initialpose");
+    ros::NodeHandle n;
 
     // Subscribe to the /initialpose topic
-    ros::Subscriber initial_pose_subscriber = nh.subscribe("/initialpose", 1, initialPoseCallback);
+    ros::Subscriber initial_pose_subscriber = n.subscribe("/initialpose", 1, initialPoseCallback);
 
     // Spin and process callbacks
     ros::spin();

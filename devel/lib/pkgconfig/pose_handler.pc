@@ -1,0 +1,1 @@
+/home/lattinone/Damiano/progetto/devel/.private/pose_handler/lib/pkgconfig/pose_handler.pc
