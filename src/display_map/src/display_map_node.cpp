@@ -10,17 +10,39 @@ int main(int argc, char** argv ){
     // map's publisher
     ros::Publisher map_publisher = n.advertise<nav_msgs::OccupancyGrid>("/map", 1);
 
+    // loading map using OpenCV
+    std::string imagePath = "src/display_map/src/diag_map.png";
+    cv::Mat image = cv::imread(imagePath, cv::IMREAD_GRAYSCALE);
+
+    // error management
+    if (image.empty())
+    {
+        std::cerr << "Failed to load the image from path: " << imagePath << std::endl;
+        return -1;
+    }
+
     // map message to be published
     nav_msgs::OccupancyGrid map_msg;
 
-    // map's info (found online), to be filled (width, height, resolution, etc.)
-    map_msg.info.width = 2138;
-    map_msg.info.height = 987;
-    map_msg.info.resolution = 0.5;
+    // map properties - auto detected
+    map_msg.info.width = image.cols;
+    map_msg.info.height = image.rows;
+    map_msg.info.resolution = 0.05; 
 
-    // TODO: i have to set the map data
+    // convert .png image data to occupancy grid data (i.e. .png -> OccupancyGrid msg)
+    map_msg.data.resize(map_msg.info.width * map_msg.info.height);
+    for (int y = 0; y < image.rows; ++y)
+    {
+        for (int x = 0; x < image.cols; ++x)
+        {
+            // [0, 100] = prob. of going in that pixel
+            // white pixels=free space
+            // black pixels=obstacles
+            // transparent pixels=nothing
+        }
+    }
 
-    // Publish the map
+    // publish the map
     while (ros::ok())
     {
         // i've read that this is usefull
