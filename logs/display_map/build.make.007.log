@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target display_map_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/display_map_node.dir/src/display_map_node.cpp.o[0m
+[01m[K/home/lattinone/Damiano/progetto/src/display_map/src/display_map_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/display_map/src/display_map_node.cpp:9:36:[m[K [01;31m[Kerror: [m[K‘[01m[Knh[m[K’ was not declared in this scope; did you mean ‘[01m[Kn[m[K’?
+    9 |     ros::Publisher map_publisher = [01;31m[Knh[m[K.advertise<nav_msgs::OccupancyGrid>("/map", 1);
+      |                                    [01;31m[K^~[m[K
+      |                                    [32m[Kn[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/display_map/src/display_map_node.cpp:9:72:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+    9 |     ros::Publisher map_publisher = nh.advertise<nav_msgs::OccupancyGrid[01;31m[K>[m[K("/map", 1);
+      |                                                                        [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/display_map_node.dir/build.make:63: CMakeFiles/display_map_node.dir/src/display_map_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/display_map_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

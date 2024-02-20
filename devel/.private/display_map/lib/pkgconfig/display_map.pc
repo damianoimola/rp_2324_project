@@ -1,0 +1,8 @@
+prefix=/home/lattinone/Damiano/progetto/devel/.private/display_map
+
+Name: display_map
+Description: Description of display_map
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
