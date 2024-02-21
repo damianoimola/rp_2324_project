@@ -1,0 +1,8 @@
+[35m[1mScanning dependencies of target pose_handler_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o[0m
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kdouble g()[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:118:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  118 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[100%] [32m[1mLinking CXX executable /home/lattinone/Damiano/progetto/devel/.private/pose_handler/lib/pose_handler/pose_handler_node[0m
+[100%] Built target pose_handler_node

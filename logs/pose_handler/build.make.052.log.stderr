@@ -1,0 +1,4 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kdouble g()[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:118:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  118 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
