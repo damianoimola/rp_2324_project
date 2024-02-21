@@ -5,14 +5,21 @@
 #include <nav_msgs/OccupancyGrid.h>
 #include <nav_msgs/Path.h>
 #include <queue>
+#include <list>
 #include <unordered_set>
 #include <cmath>
 #include <limits>
 #include <unistd.h>
 
+// #include "compute_dmap.h"
+#include "rp_loc/dmap_localizer.h"
+#include "rp_base/draw_helpers.h"
+#include "rp_base/grid_map.h"
+
 bool goal_received = false;
 bool init_received = false;
 double map_resolution;
+std::list<double> obstacles_distances;
 
 geometry_msgs::Pose global_initial_pose;
 geometry_msgs::Pose global_goal_pose;
@@ -24,11 +31,11 @@ nav_msgs::OccupancyGrid::ConstPtr global_map;
 struct Node
 {
     double x, y;
-    double f; // f(n) = h(n) + g(n)
+    double f, heu, cost; // f(n) = h(n) + g(n)
     Node* parent;
 
     // constructor as seen during lectures
-    Node(double x, double y, double f, Node* parent = nullptr) : x(x), y(y), f(f), parent(parent) {}
+    Node(double x, double y, double f, double heu, double cost, Node* parent = nullptr) : x(x), y(y), f(f), heu(heu), cost(cost), parent(parent) {}
 };
 
 // function to compare between priority queues
@@ -113,10 +120,52 @@ double h(double curr_x, double curr_y, double goal_x, double goal_y){
 }
 
 // cost function
-double g(){
-    return 0.0;
+double g(double curr_x, double curr_y){
+    int index = curr_x * global_map->info.width + curr_y;
+
+    std::list<double>::iterator it = obstacles_distances.begin();
+    std::advance(it, index);
+
+    double element = *it;
+
+    return element;
 }
 
+// distance map
+std::list<double> compute_distance_map(string filename, float resolution, float dmax) {
+  // load the map
+  GridMap grid_map(0,0,resolution);
+  grid_map.loadFromImage(filename.c_str(), resolution);
+
+  DMapLocalizer localizer;
+  localizer.setMap(grid_map, dmax);
+  cerr << "rows:  " << localizer.distances.rows << " cols: " << localizer.distances.cols << endl;
+
+  // prepare canvas for visualization
+  Canvas canvas;
+  const auto& distances = localizer.distances;
+  Grid_<uint8_t> image(distances.rows, distances.cols);
+  
+  // compute normalization of the DMAP
+  float f_min=1e9;
+  float f_max=0;
+  for(auto& f: distances.cells) {
+    f_min=std::min(f, f_min);
+    f_max=std::max(f, f_max);
+  }
+  float scale = 255./(f_max-f_min);
+
+  list<double> obstacles_distances;
+  for (size_t i=0; i<distances.cells.size(); ++i) {
+    obstacles_distances.push_front(scale  * (distances.cells[i] - f_min));
+  }
+  for(double item : obstacles_distances){
+    std::cout << item << " ";
+  }
+  ROS_INFO("num of cells %ld", distances.cells.size());
+
+  return obstacles_distances;
+}
 
 // A* algorithm
 std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, double goal_x, double goal_y)
@@ -143,7 +192,7 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
     std::unordered_set<Node*> closed_set;
 
     // setting up the root of the A* tree
-    Node* start_node = new Node(start_grid_x, start_grid_y, 0);
+    Node* start_node = new Node(start_grid_x, start_grid_y, 0, 0, 0);
     open_set.push(start_node);
 
     // iterating while there exists elements in open set
@@ -151,7 +200,7 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
     {
         Node* current = open_set.top();
         open_set.pop();
-        ROS_INFO("### CURRENT %f %f, f(n) %f", current->x, current->y, current->f);
+        ROS_INFO("### CURRENT %f %f, f(n) %f, g(n) %f, h(n) %f", current->x, current->y, current->f, current->cost, current->heu);
 
         // adding root to the closed set
         closed_set.insert(current);
@@ -186,7 +235,6 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
                 // computing next position to evaluate
                 int nx = current->x + dx;
                 int ny = current->y + dy;
-                ROS_INFO("%d %d %d %d", nx, ny, dx, dy);
 
                 // TODO: check if cell is within map boundaries
 
@@ -197,10 +245,10 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
                 if (global_map->data[index] == 0)
                 {
                     double heuristic = h(nx, ny, goal_grid_x, goal_grid_y);
-                    double cost = 0; //g();
+                    double cost = 0;//g(nx, ny);
                     double evaluation_function = heuristic + cost;
 
-                    Node* neighbor = new Node(nx, ny, evaluation_function, current);
+                    Node* neighbor = new Node(nx, ny, evaluation_function, heuristic, cost, current);
 
                     if (closed_set.find(neighbor) == closed_set.end())
                     {
@@ -218,6 +266,14 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
 }
 
 
+
+
+
+/*
+    #######################################
+    ####    MAIN
+    #######################################
+*/
 
 int main(int argc, char **argv)
 {
@@ -244,8 +300,11 @@ int main(int argc, char **argv)
         ros::Duration(0.5).sleep();
         ROS_INFO("waiting for map");
     }
-    
 
+    // obtaining the distance map
+    ROS_INFO("computing distance map");
+    obstacles_distances = compute_distance_map("./diag_map.png", map_resolution, 0.5);
+    
     // before procees we need to be sure of having poses
     while ((!init_received || !goal_received) && ros::ok())
     {

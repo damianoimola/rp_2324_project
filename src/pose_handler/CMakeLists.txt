@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   nav_msgs
   roscpp
+  cv_bridge
 )
 
 ## System dependencies are found with CMake's conventions
@@ -117,6 +118,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
+  ${OpenCV_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -133,7 +135,22 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(pose_handler_node src/pose_handler_node.cpp)
+add_executable(pose_handler_node
+  src/pose_handler_node.cpp
+  # src/rp_loc/compute_dmap.cpp
+  src/rp_loc/dmap_localizer.cpp
+  src/rp_base/dmap.cpp
+  src/rp_base/draw_helpers.cpp
+  src/rp_base/grid_map.cpp
+  src/rp_base/grid_mapping.cpp
+  # src/rp_base/grid.cpp
+  src/rp_base/laser_scan.cpp
+)
+
+
+find_package(OpenCV REQUIRED)
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -147,6 +164,7 @@ add_executable(pose_handler_node src/pose_handler_node.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(pose_handler_node
+  ${OpenCV_LIBRARIES}
   ${catkin_LIBRARIES}
 )
 

@@ -1,0 +1,17 @@
+In file included from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:13[m[K:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/rp_loc/compute_dmap.h:5:1:[m[K [01;31m[Kerror: [m[K‘[01m[Klist[m[K’ does not name a type
+    5 | [01;31m[Klist[m[K<double> compute_distance_map(std::string filename, float resolution, float dmax);
+      | [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:18:1:[m[K [01;31m[Kerror: [m[K‘[01m[Klist[m[K’ does not name a type
+   18 | [01;31m[Klist[m[K<double> obstacles_distances;
+      | [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:261:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacles_distances[m[K’ was not declared in this scope
+  261 |     [01;31m[Kobstacles_distances[m[K = compute_distance_map("./diag_map.png", map_resolution, 0.1)
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:261:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kcompute_distance_map[m[K’ was not declared in this scope
+  261 |     obstacles_distances = [01;31m[Kcompute_distance_map[m[K("./diag_map.png", map_resolution, 0.1)
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:63: CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

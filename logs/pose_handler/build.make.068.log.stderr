@@ -1,0 +1,8 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/rp_loc/compute_dmap.cpp:8:10:[m[K [01;31m[Kfatal error: [m[Krp_base/draw_helpers.h: No such file or directory
+    8 | #include [01;31m[K"rp_base/draw_helpers.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:76: CMakeFiles/pose_handler_node.dir/src/rp_loc/compute_dmap.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

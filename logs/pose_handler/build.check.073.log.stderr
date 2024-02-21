@@ -1,0 +1,9 @@
+[31m[1mCMake Error[0m at /home/lattinone/Damiano/progetto/src/pose_handler/CMakeLists.txt:144 (add_subdirectory):
+  add_subdirectory given source "rp_base" which is not an existing directory.
+
+
+[31m[1mCMake Error[0m at /home/lattinone/Damiano/progetto/src/pose_handler/CMakeLists.txt:145 (add_subdirectory):
+  add_subdirectory given source "rp_loc" which is not an existing directory.
+
+
+make: *** [Makefile:914: cmake_check_build_system] Error 1
