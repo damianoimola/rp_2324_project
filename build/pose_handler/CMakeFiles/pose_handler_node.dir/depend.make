@@ -16,6 +16,9 @@ CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/in
 CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
 CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3Stamped.h
+CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/nav_msgs/MapMetaData.h
+CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/nav_msgs/OccupancyGrid.h
+CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/nav_msgs/Path.h
 CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o: /opt/ros/noetic/include/ros/assert.h

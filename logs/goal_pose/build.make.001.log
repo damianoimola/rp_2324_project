@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target goal_pose_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/goal_pose_node.dir/src/goal_pose_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/lattinone/Damiano/progetto/devel/.private/goal_pose/lib/goal_pose/goal_pose_node[0m
-[100%] Built target goal_pose_node

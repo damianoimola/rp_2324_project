@@ -1,0 +1,113 @@
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > > findPath(double, double, double, double)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lf[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 8 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+  151 |     ROS_INFO([01;35m[K"GRID %lf, %lf, %lf, %lf"[m[K, [32m[Kstart_grid_x[m[K, start_grid_y, goal_grid_x, goal_grid_y);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~[m[K
+      |                                         [32m[K|[m[K
+      |                                         [32m[Kint[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  151 |     [01;36m[KROS_INFO[m[K("GRID %lf, %lf, %lf, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:22:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  151 |     ROS_INFO("GRID [01;36m[K%lf[m[K, %lf, %lf, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |                    [01;36m[K~~^[m[K
+      |                      [01;36m[K|[m[K
+      |                      [01;36m[Kdouble[m[K
+      |                    [32m[K%d[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lf[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 9 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+  151 |     ROS_INFO([01;35m[K"GRID %lf, %lf, %lf, %lf"[m[K, start_grid_x, [32m[Kstart_grid_y[m[K, goal_grid_x, goal_grid_y);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K                [32m[K~~~~~~~~~~~~[m[K
+      |                                                       [32m[K|[m[K
+      |                                                       [32m[Kint[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  151 |     [01;36m[KROS_INFO[m[K("GRID %lf, %lf, %lf, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:27:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  151 |     ROS_INFO("GRID %lf, [01;36m[K%lf[m[K, %lf, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |                         [01;36m[K~~^[m[K
+      |                           [01;36m[K|[m[K
+      |                           [01;36m[Kdouble[m[K
+      |                         [32m[K%d[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lf[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 10 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+  151 |     ROS_INFO([01;35m[K"GRID %lf, %lf, %lf, %lf"[m[K, start_grid_x, start_grid_y, [32m[Kgoal_grid_x[m[K, goal_grid_y);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K                              [32m[K~~~~~~~~~~~[m[K
+      |                                                                     [32m[K|[m[K
+      |                                                                     [32m[Kint[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  151 |     [01;36m[KROS_INFO[m[K("GRID %lf, %lf, %lf, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:32:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  151 |     ROS_INFO("GRID %lf, %lf, [01;36m[K%lf[m[K, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |                              [01;36m[K~~^[m[K
+      |                                [01;36m[K|[m[K
+      |                                [01;36m[Kdouble[m[K
+      |                              [32m[K%d[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:14:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lf[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 11 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+  151 |     ROS_INFO([01;35m[K"GRID %lf, %lf, %lf, %lf"[m[K, start_grid_x, start_grid_y, goal_grid_x, [32m[Kgoal_grid_y[m[K);
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                           [32m[K~~~~~~~~~~~[m[K
+      |                                                                                  [32m[K|[m[K
+      |                                                                                  [32m[Kint[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  151 |     [01;36m[KROS_INFO[m[K("GRID %lf, %lf, %lf, %lf", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:151:37:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  151 |     ROS_INFO("GRID %lf, %lf, %lf, [01;36m[K%lf[m[K", start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
+      |                                   [01;36m[K~~^[m[K
+      |                                     [01;36m[K|[m[K
+      |                                     [01;36m[Kdouble[m[K
+      |                                   [32m[K%d[m[K
