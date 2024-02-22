@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/catkin_tools/execution/executor.py", line 101, in async_job
+    transport, logger = await (
+  File "/usr/lib/python3/dist-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 135, in async_execute_process
+    transport, protocol = await _async_execute_process_pty(
+  File "/usr/lib/python3/dist-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 78, in _async_execute_process_pty
+    transport, protocol = await loop.subprocess_exec(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1630, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+  File "/usr/lib/python3.8/asyncio/unix_events.py", line 197, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+  File "/usr/lib/python3.8/asyncio/base_subprocess.py", line 36, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+  File "/usr/lib/python3.8/asyncio/unix_events.py", line 789, in _start
+    self._proc = subprocess.Popen(
+  File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.8/subprocess.py", line 1652, in _execute_child
+    self._close_pipe_fds(p2cread, p2cwrite,
+  File "/usr/lib/python3.8/subprocess.py", line 1101, in _close_pipe_fds
+    def _close_pipe_fds(self,
+KeyboardInterrupt
+

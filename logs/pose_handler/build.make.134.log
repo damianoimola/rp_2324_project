@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target pose_handler_node[0m
-[ 12%] [32mBuilding CXX object CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o[0m
-[ 25%] [32m[1mLinking CXX executable /home/lattinone/Damiano/progetto/devel/.private/pose_handler/lib/pose_handler/pose_handler_node[0m
-[100%] Built target pose_handler_node
