@@ -1,0 +1,19 @@
+in /Damiano/progetto
+
+
+#1
+roscore
+
+
+#2
+rosrun rviz rviz
+
+
+#3
+rosrun map_server map_server src/display_map/src/diag_map.png  0.01
+
+
+#4
+catkin build
+source devel/setup.bash
+rosrun pose_handler pose_handler_node 3.0 1.0 0.5 A* -DDEBUG
