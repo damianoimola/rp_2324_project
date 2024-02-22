@@ -1,0 +1,1 @@
+/home/lattinone/Damiano/progetto/devel/.private/display_map/lib/pkgconfig/display_map.pc

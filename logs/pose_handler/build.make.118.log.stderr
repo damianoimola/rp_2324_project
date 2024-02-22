@@ -1,0 +1,8 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:321:86:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  321 |     obstacles_distances = compute_distance_map[34m[K([m[K"./diag_map.png", map_resolution, 0.15[01;31m[K;[m[K
+      |                                               [34m[K~[m[K                                      [01;31m[K^[m[K
+      |                                                                                      [32m[K)[m[K
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:63: CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

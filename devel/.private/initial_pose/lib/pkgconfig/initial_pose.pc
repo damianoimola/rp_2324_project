@@ -1,0 +1,8 @@
+prefix=/home/lattinone/Damiano/progetto/devel/.private/initial_pose
+
+Name: initial_pose
+Description: Description of initial_pose
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

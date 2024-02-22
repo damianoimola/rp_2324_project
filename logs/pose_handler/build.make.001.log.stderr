@@ -1,0 +1,124 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:8:1:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ does not name a type
+    8 | [01;31m[Knav_msgs[m[K::OccupancyGrid::ConstPtr global_map;
+      | [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:58:24:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ does not name a type
+   58 | void mapCallback(const [01;31m[Knav_msgs[m[K::OccupancyGrid::ConstPtr& map)
+      |                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:58:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+   58 | void mapCallback(const nav_msgs::OccupancyGrid[01;31m[K::[m[KConstPtr& map)
+      |                                               [01;31m[K^~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:58:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+   58 | void mapCallback[34m[K([m[Kconst nav_msgs::OccupancyGrid[01;31m[K:[m[K[32m[K:[m[KConstPtr& map)
+      |                 [34m[K~[m[K                             [01;31m[K^[m[K[32m[K~[m[K
+      |                                               [32m[K)[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:58:47:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+   58 | void mapCallback(const nav_msgs::OccupancyGrid[01;31m[K::[m[KConstPtr& map)
+      |                                               [01;31m[K^~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kdouble calculateCost(int, int)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:81:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_map[m[K’ was not declared in this scope
+   81 |             if (nx >= 0 && nx < [01;31m[Kglobal_map[m[K->info.width && ny >= 0 && ny < global_map->info.height)
+      |                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > > findPath(int, int, int, int)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:101:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_map[m[K’ was not declared in this scope
+  101 |     if (![01;31m[Kglobal_map[m[K)
+      |          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:107:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kpriority_queue[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  107 |     std::[01;31m[Kpriority_queue[m[K<Node*, std::vector<Node*>, CompareNodes> open_set;
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:4:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::priority_queue[m[K’ is defined in header ‘[01m[K<queue>[m[K’; did you forget to ‘[01m[K#include <queue>[m[K’?
+    3 | #include <tf/tf.h>
+  +++ |+[32m[K#include <queue>[m[K
+    4 | 
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:107:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K*[m[K’ token
+  107 |     std::priority_queue<Node[01;31m[K*[m[K, std::vector<Node*>, CompareNodes> open_set;
+      |                             [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:107:30:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  107 |     std::priority_queue<Node*[01;31m[K,[m[K std::vector<Node*>, CompareNodes> open_set;
+      |                              [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:107:50:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  107 |     std::priority_queue<Node*, std::vector<Node*>[01;31m[K,[m[K CompareNodes> open_set;
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:107:64:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  107 |     std::priority_queue<Node*, std::vector<Node*>, CompareNodes[01;31m[K>[m[K open_set;
+      |                                                                [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:107:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kopen_set[m[K’ was not declared in this scope
+  107 |     std::priority_queue<Node*, std::vector<Node*>, CompareNodes> [01;31m[Kopen_set[m[K;
+      |                                                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:108:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_set[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  108 |     std::[01;31m[Kunordered_set[m[K<Node*> closed_set;
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:4:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::unordered_set[m[K’ is defined in header ‘[01m[K<unordered_set>[m[K’; did you forget to ‘[01m[K#include <unordered_set>[m[K’?
+    3 | #include <tf/tf.h>
+  +++ |+[32m[K#include <unordered_set>[m[K
+    4 | 
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:108:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K*[m[K’ token
+  108 |     std::unordered_set<Node[01;31m[K*[m[K> closed_set;
+      |                            [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:108:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  108 |     std::unordered_set<Node*[01;31m[K>[m[K closed_set;
+      |                             [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:108:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclosed_set[m[K’ was not declared in this scope
+  108 |     std::unordered_set<Node*> [01;31m[Kclosed_set[m[K;
+      |                               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:148:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_map[m[K’ was not declared in this scope
+  148 |                 if (nx >= 0 && nx < [01;31m[Kglobal_map[m[K->info.width && ny >= 0 && ny < global_map->info.height)
+      |                                     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:188:65:[m[K [01;31m[Kerror: [m[K‘[01m[KmapCallback[m[K’ was not declared in this scope
+  188 |     ros::Subscriber map_subscriber = map_n.subscribe("/map", 1, [01;31m[KmapCallback[m[K);
+      |                                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:193:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_map[m[K’ was not declared in this scope
+  193 |     while (![01;31m[Kglobal_map[m[K && ros::ok())
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:203:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kstd[m[K’
+  203 |     [01;31m[Kstd[m[K::vector<geometry_msgs::PoseStamped> path = findPath(
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:204:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kx[m[K’
+  204 |         global_initial_pose.[01;31m[Kx[m[K,
+      |                             [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:205:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ky[m[K’
+  205 |         global_initial_pose.[01;31m[Ky[m[K,
+      |                             [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:206:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kx[m[K’
+  206 |         global_goal_pose.[01;31m[Kx[m[K,
+      |                          [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:207:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ky[m[K’
+  207 |         global_goal_pose.[01;31m[Ky[m[K
+      |                          [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:213:54:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ was not declared in this scope
+  213 |     ros::Publisher path_publisher = path_n.advertise<[01;31m[Knav_msgs[m[K::Path>("/path", 1);
+      |                                                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:213:44:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  213 |     ros::Publisher path_publisher = path_n.[01;31m[Kadvertise<nav_msgs::Path>[m[K("/path", 1);
+      |                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:213:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<<expression error> >(const char [6], int)[m[K’
+  213 |     ros::Publisher path_publisher = path_n.advertise<nav_msgs::Path>("/path", 1[01;31m[K)[m[K;
+      |                                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)[m[K’
+  249 |     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:213:80:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  213 |     ros::Publisher path_publisher = path_n.advertise<nav_msgs::Path>("/path", 1[01;31m[K)[m[K;
+      |                                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)[m[K’
+  315 |   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:213:80:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  213 |     ros::Publisher path_publisher = path_n.advertise<nav_msgs::Path>("/path", 1[01;31m[K)[m[K;
+      |                                                                                [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:214:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ is not a class, namespace, or enumeration
+  214 |     [01;31m[Knav_msgs[m[K::Path path_msg;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:215:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Kpath_n[m[K’?
+  215 |     [01;31m[Kpath_msg[m[K.header.frame_id = "map";  // Set the frame id of the path
+      |     [01;31m[K^~~~~~~~[m[K
+      |     [32m[Kpath_n[m[K
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:63: CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:808: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,1 @@
+/home/lattinone/Damiano/progetto/devel/.private/initial_guess/share/initial_guess/cmake/initial_guessConfig-version.cmake

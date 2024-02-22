@@ -1,0 +1,201 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kvoid initialPoseCallback(const ConstPtr&)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >::ConstPtr[m[K’ {aka ‘[01m[Kboost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >[m[K’} and ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’})
+   54 |     global_initial_pose = [01;31m[Kpose[m[K;
+      |                           [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:547:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(const boost::shared_ptr<T>&) [with T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  547 |     shared_ptr & [01;36m[Koperator[m[K=( shared_ptr const & r ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:547:48:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} to ‘[01m[Kconst boost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >&[m[K’
+  547 |     shared_ptr & operator=( [01;36m[Kshared_ptr const & r[m[K ) BOOST_SP_NOEXCEPT
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:556:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(const boost::shared_ptr<Y>&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  556 |     shared_ptr & [01;36m[Koperator[m[K=(shared_ptr<Y> const & r) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:556:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst boost::shared_ptr<X>[m[K’
+   54 |     global_initial_pose = [01;36m[Kpose[m[K;
+      |                           [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:567:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  567 |     shared_ptr & [01;36m[Koperator[m[K=( std::auto_ptr<Y> & r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:567:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kstd::auto_ptr<Y>[m[K’
+   54 |     global_initial_pose = [01;36m[Kpose[m[K;
+      |                           [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:576:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  576 |     shared_ptr & [01;36m[Koperator[m[K=( std::auto_ptr<Y> && r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:576:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kstd::auto_ptr<Y>[m[K’
+   54 |     global_initial_pose = [01;36m[Kpose[m[K;
+      |                           [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:598:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::unique_ptr<_Up, _Ep>&&) [with Y = Y; D = D; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  598 |     shared_ptr & [01;36m[Koperator[m[K=( std::unique_ptr<Y, D> && r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:598:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kstd::unique_ptr<_Tp, _Dp>[m[K’
+   54 |     global_initial_pose = [01;36m[Kpose[m[K;
+      |                           [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:607:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::movelib::unique_ptr<Y, D>) [with Y = Y; D = D; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  607 |     shared_ptr & [01;36m[Koperator[m[K=( boost::movelib::unique_ptr<Y, D> r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:607:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kboost::movelib::unique_ptr<Y, D>[m[K’
+   54 |     global_initial_pose = [01;36m[Kpose[m[K;
+      |                           [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:658:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<T>&&) [with T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  658 |     shared_ptr & [01;36m[Koperator[m[K=( shared_ptr && r ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:658:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} to ‘[01m[Kboost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >&&[m[K’
+  658 |     shared_ptr & operator=( [01;36m[Kshared_ptr && r[m[K ) BOOST_SP_NOEXCEPT
+      |                             [01;36m[K~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:665:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  665 |     shared_ptr & [01;36m[Koperator[m[K=( shared_ptr<Y> && r ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:665:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:54:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kboost::shared_ptr<X>[m[K’
+   54 |     global_initial_pose = [01;36m[Kpose[m[K;
+      |                           [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:683:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::detail::sp_nullptr_t) [with T = const geometry_msgs::Pose_<std::allocator<void> >; boost::detail::sp_nullptr_t = std::nullptr_t][m[K’
+  683 |     shared_ptr & [01;36m[Koperator[m[K=( boost::detail::sp_nullptr_t ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:683:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} to ‘[01m[Kboost::detail::sp_nullptr_t[m[K’ {aka ‘[01m[Kstd::nullptr_t[m[K’}
+  683 |     shared_ptr & operator=( [01;36m[Kboost::detail::sp_nullptr_t[m[K ) BOOST_SP_NOEXCEPT
+      |                             [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kvoid goalPoseCallback(const ConstPtr&)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >::ConstPtr[m[K’ {aka ‘[01m[Kboost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >[m[K’} and ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’})
+   62 |     global_goal_pose = [01;31m[Kpose[m[K;
+      |                        [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:547:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(const boost::shared_ptr<T>&) [with T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  547 |     shared_ptr & [01;36m[Koperator[m[K=( shared_ptr const & r ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:547:48:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} to ‘[01m[Kconst boost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >&[m[K’
+  547 |     shared_ptr & operator=( [01;36m[Kshared_ptr const & r[m[K ) BOOST_SP_NOEXCEPT
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:556:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(const boost::shared_ptr<Y>&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  556 |     shared_ptr & [01;36m[Koperator[m[K=(shared_ptr<Y> const & r) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:556:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst boost::shared_ptr<X>[m[K’
+   62 |     global_goal_pose = [01;36m[Kpose[m[K;
+      |                        [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:567:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  567 |     shared_ptr & [01;36m[Koperator[m[K=( std::auto_ptr<Y> & r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:567:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kstd::auto_ptr<Y>[m[K’
+   62 |     global_goal_pose = [01;36m[Kpose[m[K;
+      |                        [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:576:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  576 |     shared_ptr & [01;36m[Koperator[m[K=( std::auto_ptr<Y> && r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:576:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kstd::auto_ptr<Y>[m[K’
+   62 |     global_goal_pose = [01;36m[Kpose[m[K;
+      |                        [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:598:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::unique_ptr<_Up, _Ep>&&) [with Y = Y; D = D; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  598 |     shared_ptr & [01;36m[Koperator[m[K=( std::unique_ptr<Y, D> && r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:598:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kstd::unique_ptr<_Tp, _Dp>[m[K’
+   62 |     global_goal_pose = [01;36m[Kpose[m[K;
+      |                        [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:607:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::movelib::unique_ptr<Y, D>) [with Y = Y; D = D; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  607 |     shared_ptr & [01;36m[Koperator[m[K=( boost::movelib::unique_ptr<Y, D> r )
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:607:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kboost::movelib::unique_ptr<Y, D>[m[K’
+   62 |     global_goal_pose = [01;36m[Kpose[m[K;
+      |                        [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:658:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<T>&&) [with T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  658 |     shared_ptr & [01;36m[Koperator[m[K=( shared_ptr && r ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:658:43:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} to ‘[01m[Kboost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >&&[m[K’
+  658 |     shared_ptr & operator=( [01;36m[Kshared_ptr && r[m[K ) BOOST_SP_NOEXCEPT
+      |                             [01;36m[K~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:665:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = Y; T = const geometry_msgs::Pose_<std::allocator<void> >][m[K’
+  665 |     shared_ptr & [01;36m[Koperator[m[K=( shared_ptr<Y> && r ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:665:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:62:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kboost::shared_ptr<X>[m[K’
+   62 |     global_goal_pose = [01;36m[Kpose[m[K;
+      |                        [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:1[m[K:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:683:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::detail::sp_nullptr_t) [with T = const geometry_msgs::Pose_<std::allocator<void> >; boost::detail::sp_nullptr_t = std::nullptr_t][m[K’
+  683 |     shared_ptr & [01;36m[Koperator[m[K=( boost::detail::sp_nullptr_t ) BOOST_SP_NOEXCEPT
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:683:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Pose[m[K’ {aka ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >[m[K’} to ‘[01m[Kboost::detail::sp_nullptr_t[m[K’ {aka ‘[01m[Kstd::nullptr_t[m[K’}
+  683 |     shared_ptr & operator=( [01;36m[Kboost::detail::sp_nullptr_t[m[K ) BOOST_SP_NOEXCEPT
+      |                             [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:63: CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

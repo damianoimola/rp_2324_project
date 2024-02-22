@@ -1,0 +1,8 @@
+prefix=/home/lattinone/Damiano/progetto/devel/.private/pose_handler
+
+Name: pose_handler
+Description: Description of pose_handler
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,10 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:17:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeque[m[K’ does not name a type
+   17 | [01;31m[Kdeque[m[K<double> obstacles_distances;
+      | [01;31m[K^~~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:260:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kobstacles_distances[m[K’ was not declared in this scope
+  260 |     [01;31m[Kobstacles_distances[m[K = compute_distance_map("./diag_map.png", map_resolution, 0.1)
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:63: CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:170: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

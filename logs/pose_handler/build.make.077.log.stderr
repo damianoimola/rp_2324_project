@@ -1,0 +1,8 @@
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/rp_base/grid.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kgrid.c[[: No such file or directory
+    1 | #include [01;31m[K"grid.c[["[m[K
+      |          [01;31m[K^~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:128: CMakeFiles/pose_handler_node.dir/src/rp_base/grid.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,10 @@
+/usr/bin/ld: CMakeFiles/pose_handler_node.dir/src/rp_loc/dmap_localizer.cpp.o: in function `DMapLocalizer::setMap(std::vector<Eigen::Matrix<float, 2, 1, 0, 2, 1>, std::allocator<Eigen::Matrix<float, 2, 1, 0, 2, 1> > >, float, float)':
+dmap_localizer.cpp:(.text+0x2b9): undefined reference to `GridMapping::resize(float, Eigen::Matrix<float, 2, 1, 0, 2, 1> const&)'
+/usr/bin/ld: CMakeFiles/pose_handler_node.dir/src/rp_base/grid_map.cpp.o: in function `GridMap::GridMap(int, int, float)':
+grid_map.cpp:(.text+0x70): undefined reference to `GridMapping::resize(int, int, float)'
+/usr/bin/ld: CMakeFiles/pose_handler_node.dir/src/rp_base/grid_map.cpp.o: in function `GridMap::loadFromImage(char const*, float)':
+grid_map.cpp:(.text+0x5b3): undefined reference to `GridMapping::resize(int, int, float)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:273: /home/lattinone/Damiano/progetto/devel/.private/pose_handler/lib/pose_handler/pose_handler_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,6 @@
+devel_space: /home/lattinone/Damiano/progetto/devel
+install: false
+install_space: /home/lattinone/Damiano/progetto/install
+profile: default
+source_space: /home/lattinone/Damiano/progetto/src
+workspace: /home/lattinone/Damiano/progetto

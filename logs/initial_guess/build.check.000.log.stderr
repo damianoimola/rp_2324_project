@@ -1,0 +1,15 @@
+[31m[1mCMake Error[0m at /home/lattinone/Damiano/progetto/src/initial_guess/CMakeLists.txt:135 (add_executable):
+  Cannot find source file:
+
+    src/initial_guess_node.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+[31m[1mCMake Error[0m at /home/lattinone/Damiano/progetto/src/initial_guess/CMakeLists.txt:135 (add_executable):
+  No SOURCES given to target: initial_guess_node
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+make: *** [Makefile:600: cmake_check_build_system] Error 1
