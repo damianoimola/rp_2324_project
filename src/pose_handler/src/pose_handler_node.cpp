@@ -17,10 +17,16 @@
 #include "rp_base/draw_helpers.h"
 #include "rp_base/grid_map.h"
 
+
+#define DEBUG false
+
+
+
+
 bool goal_received = false;
 bool init_received = false;
 double map_resolution;
-std::list<double> obstacles_distances;
+std::vector<double> obstacles_distances;
 
 geometry_msgs::Pose global_initial_pose;
 geometry_msgs::Pose global_goal_pose;
@@ -124,17 +130,14 @@ double h(double curr_x, double curr_y, double goal_x, double goal_y){
 double g(double curr_x, double curr_y){
     int index = curr_x * global_map->info.width + curr_y;
 
-    std::list<double>::iterator it = obstacles_distances.begin();
-    std::advance(it, index);
-
-    double element = *it;
+    double element = obstacles_distances[index];
     element = element/255.0;
 
     return (1.0 - element);
 }
 
 // distance map
-std::list<double> compute_distance_map(string filename, float resolution, float dmax) {
+std::vector<double> compute_distance_map(string filename, float resolution, float dmax) {
   // load the map
   GridMap grid_map(0,0,resolution);
   grid_map.loadFromImage(filename.c_str(), resolution);
@@ -154,20 +157,20 @@ std::list<double> compute_distance_map(string filename, float resolution, float 
   }
   float scale = 255./(f_max-f_min);
 
-  list<double> obstacles_distances;
+  vector<double> obstacles_distances;
   for (size_t i=0; i<distances.cells.size(); ++i) {
-    obstacles_distances.push_front(scale  * (distances.cells[i] - f_min));
+    // obstacles_distances.push_back(scale  * (distances.cells[i] - f_min));
+    obstacles_distances.push_back(distances.cells[i]);
   }
-//   for(double item : obstacles_distances){
-//     std::cout << item << " ";
-//   }
-  ROS_INFO("num of cells %ld", distances.cells.size());
-
+  std::reverse(obstacles_distances.begin(), obstacles_distances.end());
+  
+  ROS_INFO("num of cells %ld, random sample %f", distances.cells.size(), distances.cells[500]);
+  
   return obstacles_distances;
 }
 
 // A* algorithm
-std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, double goal_x, double goal_y, double alpha, double beta)
+std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, double goal_x, double goal_y, double alpha, double beta, std::string mode)
 {
     if (!global_map) {
         ROS_ERROR("No map received");
@@ -199,8 +202,11 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
     {
         Node* current = open_set.top();
         open_set.pop();
+
+        #ifdef DEBUG
         ROS_INFO("### CURRENT %f %f, f(n) %f, g(n) %f, h(n) %f, size %ld",
             current->x, current->y, current->f, current->cost, current->heu, open_set.size());
+        #endif
 
         // adding root to the closed set
         closed_set.insert(current);
@@ -243,10 +249,10 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
                 // if we are in a "walkable" place
                 if (global_map->data[index] == 0)
                 {
-                    double heuristic = beta * h(nx, ny, goal_grid_x, goal_grid_y);
-                    // double cost = alpha * g(nx, ny) + current->cost;
+                    double heuristic = mode == "UCS" ? 0 : beta * h(nx, ny, goal_grid_x, goal_grid_y);
+                    double cost = mode == "GBFS" ? 0 : alpha * g(nx, ny) + current->cost;
                     // double cost = alpha * g(nx, ny);
-                    double cost = 0;
+                    // double cost = 0;
                     double evaluation_function = heuristic + cost;
 
                     Node* neighbor = new Node(nx, ny, evaluation_function, heuristic, cost, current);
@@ -294,11 +300,12 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "sub_posehandler");
 
-    if(argc < 4) {ROS_ERROR("USAGE: <alpha> <beta> <dmax>"); return -1;}
+    if(argc < 5) {ROS_ERROR("USAGE: <alpha> <beta> <dmax> <mode>\nSUGGESTED: 3.0 1.0 0.5 A*"); return -1;}
 
     double alpha = atof(argv[1]);
     double beta = atof(argv[2]);
     double dmax = atof(argv[3]);
+    std::string mode = argv[4];
 
     // declaring all necessary handlers
     ros::NodeHandle ip_n;
@@ -343,11 +350,11 @@ int main(int argc, char **argv)
         global_initial_pose.position.y,
         global_goal_pose.position.x,
         global_goal_pose.position.y,
-        alpha, beta
+        alpha, beta, mode
     );
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    ROS_INFO("### PATH FOUND, number of poses: %ld, time elapsed %ld", path.size(), duration.count());
+    ROS_INFO("### PATH FOUND, number of poses: %ld, time elapsed %ld sec.", path.size(), duration.count()/1000000);
 
     // publish the path
     ros::NodeHandle path_n;
