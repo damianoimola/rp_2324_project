@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target pose_handler_node[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o[0m
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:[m[K In function ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > > a_star(double, double, double, double)[m[K’:
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:252:100:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KNode::Node(int&, int&, double&, double&, double&, Node*&)[m[K’
+  252 |                     Node* neighbor = new Node(nx, ny, evaluation_function, heuristic, cost, current[01;31m[K)[m[K;
+      |                                                                                                    [01;31m[K^[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:38:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KNode::Node(double, double, double, Node*)[m[K’
+   38 |     [01;36m[KNode[m[K(double x, double y, double f, Node* parent = nullptr) : x(x), y(y), f(f), heu(heu), cost(cost), parent(parent) {}
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:38:5:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 6 provided
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr Node::Node(const Node&)[m[K’
+   31 | struct [01;36m[KNode[m[K
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 6 provided
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr Node::Node(Node&&)[m[K’
+[01m[K/home/lattinone/Damiano/progetto/src/pose_handler/src/pose_handler_node.cpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 6 provided
+make[2]: *** [CMakeFiles/pose_handler_node.dir/build.make:63: CMakeFiles/pose_handler_node.dir/src/pose_handler_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/pose_handler_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

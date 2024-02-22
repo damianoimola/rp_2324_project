@@ -10,7 +10,10 @@
 #include <cmath>
 #include <limits>
 #include <unistd.h>
+<<<<<<< HEAD
 #include <chrono>
+=======
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 
 // #include "compute_dmap.h"
 #include "rp_loc/dmap_localizer.h"
@@ -128,9 +131,14 @@ double g(double curr_x, double curr_y){
     std::advance(it, index);
 
     double element = *it;
+<<<<<<< HEAD
     element = element/255.0;
 
     return (1.0 - element);
+=======
+
+    return element;
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 }
 
 // distance map
@@ -161,16 +169,26 @@ std::list<double> compute_distance_map(string filename, float resolution, float 
   for (size_t i=0; i<distances.cells.size(); ++i) {
     obstacles_distances.push_front(scale  * (distances.cells[i] - f_min));
   }
+<<<<<<< HEAD
 //   for(double item : obstacles_distances){
 //     std::cout << item << " ";
 //   }
+=======
+  for(double item : obstacles_distances){
+    std::cout << item << " ";
+  }
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
   ROS_INFO("num of cells %ld", distances.cells.size());
 
   return obstacles_distances;
 }
 
 // A* algorithm
+<<<<<<< HEAD
 std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, double goal_x, double goal_y, double alpha, double beta)
+=======
+std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, double goal_x, double goal_y)
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 {
     if (!global_map) {
         ROS_ERROR("No map received");
@@ -188,27 +206,42 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
 
 
     // priority queue allows us to discretize between elements order once push in list
+<<<<<<< HEAD
     // std::priority_queue<Node*, std::vector<Node*>, CompareNodes> open_set;
     std::set<Node*, CompareNodes> open_set;
+=======
+    std::priority_queue<Node*, std::vector<Node*>, CompareNodes> open_set;
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 
     // unordered_set is literally a set where we don't care about the order of nodes
     std::unordered_set<Node*> closed_set;
 
     // setting up the root of the A* tree
+<<<<<<< HEAD
     double heuristic = beta * h(start_grid_x, start_grid_y, goal_grid_x, goal_grid_y);
     double cost = alpha * g(start_grid_x, start_grid_y);
     double evaluation_function = heuristic + cost;
 
     Node* start_node = new Node(start_grid_x, start_grid_y, evaluation_function, heuristic, cost);
     open_set.insert(start_node);
+=======
+    Node* start_node = new Node(start_grid_x, start_grid_y, 0, 0, 0);
+    open_set.push(start_node);
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 
     // iterating while there exists elements in open set
     while (!open_set.empty())
     {
+<<<<<<< HEAD
         Node* current = *open_set.begin();
         open_set.erase(current);
         ROS_INFO("### CURRENT %f %f, f(n) %f, g(n) %f, h(n) %f, size %ld",
             current->x, current->y, current->f, current->cost, current->heu, open_set.size());
+=======
+        Node* current = open_set.top();
+        open_set.pop();
+        ROS_INFO("### CURRENT %f %f, f(n) %f, g(n) %f, h(n) %f", current->x, current->y, current->f, current->cost, current->heu);
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 
         // adding root to the closed set
         closed_set.insert(current);
@@ -224,6 +257,10 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
                 gridToWorld(current->x, current->y, pose.pose.position.x, pose.pose.position.y);
                 path.push_back(pose);
                 current = current->parent;
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
             }
 
             // reversing the path (i.e. going from the start to the end)
@@ -251,12 +288,18 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
                 // if we are in a "walkable" place
                 if (global_map->data[index] == 0)
                 {
+<<<<<<< HEAD
                     double heuristic = beta * h(nx, ny, goal_grid_x, goal_grid_y);
                     double cost = alpha * g(nx, ny) + current->cost;
+=======
+                    double heuristic = h(nx, ny, goal_grid_x, goal_grid_y);
+                    double cost = 0;//g(nx, ny);
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
                     double evaluation_function = heuristic + cost;
 
                     Node* neighbor = new Node(nx, ny, evaluation_function, heuristic, cost, current);
 
+<<<<<<< HEAD
                     bool skip = false;
                     
                     for (const auto& elem: open_set) {
@@ -283,6 +326,12 @@ std::vector<geometry_msgs::PoseStamped> a_star(double start_x, double start_y, d
                     {
                         open_set.insert(neighbor);
                         // closed_set.insert(neighbor);
+=======
+                    if (closed_set.find(neighbor) == closed_set.end())
+                    {
+                        open_set.push(neighbor);
+                        closed_set.insert(neighbor);
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
                     }
                 }
             }
@@ -308,12 +357,15 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "sub_posehandler");
 
+<<<<<<< HEAD
     if(argc < 4) {ROS_ERROR("USAGE: <alpha> <beta> <dmax>"); return -1;}
 
     double alpha = atof(argv[1]);
     double beta = atof(argv[2]);
     double dmax = atof(argv[3]);
 
+=======
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
     // declaring all necessary handlers
     ros::NodeHandle ip_n;
     ros::NodeHandle gp_n;
@@ -337,9 +389,14 @@ int main(int argc, char **argv)
     }
 
     // obtaining the distance map
+<<<<<<< HEAD
     ROS_INFO("alpha %f, dmax %f resolution %f", alpha, dmax, map_resolution);
     ROS_INFO("computing distance map");
     obstacles_distances = compute_distance_map("./diag_map.png", map_resolution, dmax);
+=======
+    ROS_INFO("computing distance map");
+    obstacles_distances = compute_distance_map("./diag_map.png", map_resolution, 0.5);
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
     
     // before procees we need to be sure of having poses
     while ((!init_received || !goal_received) && ros::ok())
@@ -351,17 +408,26 @@ int main(int argc, char **argv)
 
     // run A* algorithm
     ROS_INFO("### SEARCHING PATH");
+<<<<<<< HEAD
     auto start = std::chrono::high_resolution_clock::now();
+=======
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
     std::vector<geometry_msgs::PoseStamped> path = a_star(
         global_initial_pose.position.x,
         global_initial_pose.position.y,
         global_goal_pose.position.x,
+<<<<<<< HEAD
         global_goal_pose.position.y,
         alpha, beta
     );
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
     ROS_INFO("### PATH FOUND, number of poses: %ld, time elapsed %ld", path.size(), duration.count());
+=======
+        global_goal_pose.position.y
+    );
+    ROS_INFO("### PATH FOUND, number of poses: %ld", path.size());
+>>>>>>> fc80c5cae5de7d939ba016bab51d659d1d131e0b
 
     // publish the path
     ros::NodeHandle path_n;
