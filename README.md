@@ -11,7 +11,7 @@ The main node that handles everything is the **pose_handler_node**. Recalling th
 -    **Mode** let you select between 3 algorithm to use: **A\*** (i.e. `f(n)=g(n)+h(n)`), **UCS** (Uniform Cost Search, i.e. `f(n)=g(n)`) and **GBFS** (Greedy Best First Search, i.e. `f(n)=h(n)`), in particular, selecting alpha and beta different from 1.0, you will choose the weighted version of each of these algorithm.
 
 ##  Execution
-You need 4 different terminals windows to run the program, and the commands needed to be executed are:
+Once you are ***in the project folder***, you need 4 different terminals windows to run the program, and the commands needed to be executed are:
 1. ```roscore``` essential to allows communication between nodes
 2. ```rosrun rviz rviz``` to execute RVIZ
 3. ```rosrun map_server map_server src/display_map/src/diag_map.png  0.05``` to use the pre_built map_server node that allows you to send a map over the topic "/map" to RVIZ specifing the image of the map and its resolution
